@@ -1,0 +1,403 @@
+/* Общие стили для страницы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #ffeb3b; /* Pale yellow */
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+  
+  .header-burger-btn {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    z-index: 2;
+    background-color: transparent;
+    cursor: pointer; /* Added cursor to indicate it's clickable */
+  }
+  
+  .header-burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left: 5px;
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition */
+  }
+  
+  /* This controls the lines of the burger */
+  .header-burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+  }
+  
+  .header-burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+  }
+  
+  /* Styles for the open state */
+  .header.open .header-burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg); /* Rotate the first span */
+  }
+  
+  .header.open .header-burger-btn span:nth-child(2) {
+    opacity: 0; /* Hide the middle span */
+  }
+  
+  .header.open .header-burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg); /* Rotate the last span */
+  }
+  
+  /* Navigation */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Responsive styles */
+  .navigation-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 50px; /* Space between navigation items */
+  }
+  
+  /* Navigation item styles */
+  .navigation-item a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .navigation-item a:hover {
+    background-color: #ffd966; /* Hover color */
+  }
+  
+  .navigation-selected {
+    background-color: #ffd966;
+    color: #fff;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  
+  /* Стили для контента страницы */
+  .main-content {
+    padding: 40px 0;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+    color: #4b4b4b;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    background-color: #ffec66;
+    margin-right: 1%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffdb44;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .main-table {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .task-column {
+    background-color: #ffec66;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-column h2 {
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .task-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-item input {
+    margin-right: 10px;
+  }
+  
+  .delete-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff2a2a;
+  }
+  
+  .completed {
+    background-color: #d1f0d1;
+    text-decoration: line-through;
+  }
+  
+  .completed .delete-btn {
+    background-color: #ff7777;
+  }
+  
+  .navigation-selected {
+    background-color: #ffdb44;
+    border-radius: 5px;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 769px) {
+    .header {
+      background-color: #ffeb3b; /* Pale yellow */
+      padding: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      position: fixed;
+    }
+    
+    .header-burger-btn {
+        display: block; /* Show burger button on mobile */
+        cursor: pointer; /* Pointer cursor for better UX */
+    }
+  
+    .navigation {
+        display: flex; /* Use Flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #ffeb3b; /* Background color */
+        position: absolute; /* Position absolutely within the header */
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        left: 0; /* Align to the left */
+        top: 0; /* Align to the top */
+        opacity: 0; /* Start transparent */
+        transform: translateY(-20px); /* Slide up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+        pointer-events: none;; /* No interaction when hidden */
+    }
+  
+    .navigation-list {
+      flex-direction: column;
+    }
+  
+    .header.open .navigation {
+        opacity: 1; /* Fully visible when open */
+        transform: translateY(0); /* Slide down to original position */
+        pointer-events: auto; /* Enable interaction when open */
+        flex-direction: column;
+    }
+  
+    .navigation-item {
+        text-align: center; /* Center text in items */
+        padding: 15px 0; /* Padding for spacing */
+        opacity: 0; /* Start as invisible */
+        transform: translateY(-10px); /* Slightly translate up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for items */
+    }
+  
+    .header.open .navigation-item {
+        opacity: 1; /* Make items visible */
+        transform: translateY(0); /* Move items to original position */
+    }
+    .main-table {
+      flex-direction: column; /* Stack items vertically */
+      align-items: stretch; /* Ensure items take full width */
+      gap: 10px; /* Adjust gap for vertical layout, if needed */
+    }
+    .task-column {
+      background-color: #ffec66;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        background-color: #ffeb3b; /* Pale yellow */
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        position: fixed;
+      }
+  
+      .header-burger-btn {
+        display: block; /* Show burger button on mobile */
+        cursor: pointer; /* Pointer cursor for better UX */
+        display: block;
+        margin-right: 1%;
+    }
+    
+      .navigation {
+        display: flex; /* Use Flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #ffeb3b; /* Background color */
+        position: absolute; /* Position absolutely within the header */
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        left: 0; /* Align to the left */
+        top: 0; /* Align to the top */
+        opacity: 0; /* Start transparent */
+        transform: translateY(-20px); /* Slide up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+        pointer-events: none;; /* No interaction when hidden */
+    }
+  
+    .navigation-list {
+      flex-direction: column;
+    }
+      
+    .header.open .navigation {
+      opacity: 1; /* Fully visible when open */
+      transform: translateY(0); /* Slide down to original position */
+      pointer-events: auto; /* Enable interaction when open */
+      flex-direction: column;
+    }
+    
+      .navigation-item {
+        text-align: center; /* Center text for mobile */
+        padding: 10px 0; /* Add some padding */
+      }
+    }
+  
+  @media (max-width: 426px) { /* Media Query for mobile sizes */
+    .header {
+      background-color: #ffeb3b; /* Pale yellow */
+      padding: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+    }
+  
+      .header-burger-btn {
+          display: block; /* Show burger button on mobile */
+          cursor: pointer; /* Pointer cursor for better UX */
+      }
+  
+      .navigation {
+          display: flex; /* Use Flexbox layout */
+          flex-direction: column; /* Stack items vertically */
+          background-color: #ffeb3b; /* Background color */
+          position: absolute; /* Position absolutely within the header */
+          width: 100%; /* Full width */
+          height: 100vh; /* Full height */
+          left: 0; /* Align to the left */
+          top: 0; /* Align to the top */
+          opacity: 0; /* Start transparent */
+          transform: translateY(-20px); /* Slide up initially */
+          transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+          pointer-events: none;; /* No interaction when hidden */
+      }
+      
+      .navigation-list {
+        flex-direction: column;
+      }
+  
+      .header.open .navigation {
+          opacity: 1; /* Fully visible when open */
+          transform: translateY(0); /* Slide down to original position */
+          pointer-events: auto; /* Enable interaction when open */
+          flex-direction: column;
+      }
+  
+      .navigation-item {
+          text-align: center; /* Center text in items */
+          padding: 15px 0; /* Padding for spacing */
+          opacity: 0; /* Start as invisible */
+          transform: translateY(-10px); /* Slightly translate up initially */
+          transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for items */
+      }
+  
+      .header.open .navigation-item {
+          opacity: 1; /* Make items visible */
+          transform: translateY(0); /* Move items to original position */
+      }
+      .main-table {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Ensure items take full width */
+        gap: 10px; /* Adjust gap for vertical layout, if needed */
+    }
+    .task-column {
+      background-color: #ffec66;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+  

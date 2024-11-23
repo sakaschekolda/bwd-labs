@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon-32x32.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/main-style.css" />
+  <script defer src="scripts/burger.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" class="Logo" />
+      </div>
+      <button class="header-burger-btn" id="burger">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-selected button">Main</a>
+          </li>
+          <li class="navigation-item">
+            <a href="projects.html" class="button">Projects</a>
+          </li>
+          <li class="navigation-item">
+            <a href="tasks.html" class="button">Tasks</a>
+          </li>
+          <li class="navigation-item">
+            <a href="about.html" class="button">About app</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="main-content">
+    <div class="container1">
+      <div class="main-info">
+        <h1 class="main-title">Task management</h1>
+        <p class="main-text">My project on the subject "Web Development Fundamentals".</p>
+        <div class="main-action">
+          <a href="about.html" class="button">Show more</a>
+        </div>
+      </div>
+      <img src="images/picture.svg" alt="Image" class="main-image" />
+    </div>
+  </section>
+  <script src="burger.js"></script>
+  <script src="bundle.js"></script>
+</body>
+</html>

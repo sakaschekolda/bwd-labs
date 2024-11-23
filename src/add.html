@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="icon" href="images/favicon-32x32.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/add-style.css">
+    <script defer src="scripts/modal.js"></script>
+  </head>
+  <body>
+    <section class="main-content container-add">
+      <h1 class="main-title">Add new task</h1>
+      <button class="button" id="open-dialog-btn">Add</button>
+      <a href="tasks.html" class="button reverse">Back to tasks</a>
+    </section>
+
+    <!-- Модальное окно -->
+    <dialog id="task-dialog">
+      <form method="dialog">
+        <h2>New task</h2>
+        <input type="text" placeholder="Enter new task" class="enter" required />
+        <menu>
+          <button class="button" id="submit-task-btn">Add</button>
+          <button class="button" id="close-dialog-btn">Cancel</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="scripts/modal.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>

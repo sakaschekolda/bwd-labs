@@ -1,0 +1,319 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #f5f5dc;
+  padding: 0;
+  padding-top: 80px;
+  margin: 0;
+  display: flex;
+  flex-direction:center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the container */
+.container {
+  width: 80%; /* Set container width */
+  max-width: 1920px; /* Maximum width */
+  height: 80%; /* Adjust height as needed; this can be removed if not required */
+  max-height: 80px; /* Use a specific height or adjust as needed */
+  display: flex; /* Use flexbox for content alignment */
+  padding: 20px; /* Internal padding */
+  background-color: #fdfd96; /* Background color */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  align-items: center; /* Center items inside the container */
+  margin: 10px auto; /* Add margin on the top and bottom, auto for horizontal centering */
+}
+
+.container1 {
+  width: 100%;
+  background-color: #fdfd96;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+.header {
+  width: 100%; /* Full width of the screen */
+  position: fixed; /* Fix the header to the top */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align to the left */
+  background-color: #ffeb3b; /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.header-burger-btn {
+  display: none;
+  position: absolute; /* Position it relative to the header */
+  top: 15px; /* Margin from top */
+  right: 15px; /* Margin from right */
+  cursor: pointer; /* Pointer cursor for better UX */
+  background-color: transparent; /* Ensure no background is shown */
+  border: none; /* Remove default border */
+  z-index: 1001; /* Ensure it's above the header */
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-burger-btn:hover {
+  opacity: 0.7; /* Slight opacity change on hover */
+}
+
+.header-burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  left: 5px;
+  transition: transform 0.5s, opacity 0.5s; /* Smooth transition */
+}
+
+/* This controls the lines of the burger */
+.header-burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.header-burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+/* Styles for the open state */
+.header.open .header-burger-btn span:nth-child(1) {
+  transform: translateY(0) rotate(45deg); /* Rotate the first span */
+}
+
+.header.open .header-burger-btn span:nth-child(2) {
+  opacity: 0; /* Hide the middle span */
+}
+
+.header.open .header-burger-btn span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg); /* Rotate the last span */
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+/* Responsive styles */
+.navigation-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* Navigation item styles */
+.navigation-item a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  padding: 14px; /* Padding for clickable area */
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+.navigation-item a:hover {
+  background-color: #ffd966; /* Hover color */
+}
+
+/* Main content styling */
+.main-content {
+  padding-top: 0; /* Space for the fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  /* Font changes here */
+}
+
+.main-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+@media (max-width: 769px) {
+  .header {
+    width: 100%; /* Full width of the screen */
+    position: fixed; /* Fix the header to the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    background-color: #ffeb3b; /* Background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .container {
+    width: 80%; /* Set container width */
+    max-width: 1920px; /* Maximum width */
+    height: 80%; /* Adjust height as needed; this can be removed if not required */
+    max-height: 80px; /* Use a specific height or adjust as needed */
+    display: flex; /* Use flexbox for content alignment */
+    padding: 20px; /* Internal padding */
+    background-color: #fdfd96; /* Background color */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    align-items: center; /* Center items inside the container */
+    margin: 10px auto; /* Add margin on the top and bottom, auto for horizontal centering */
+  }
+  
+  .container1 {
+    width: 100%;
+    background-color: #fdfd96;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    align-items: center;
+  }
+
+  .header-burger-btn {
+      display: block; /* Show burger button on mobile */
+      cursor: pointer; /* Pointer cursor for better UX */
+      display: block;
+      padding-top: 20px;
+      margin-right: 10%;
+  }
+
+  .navigation {
+      display: flex; /* Use Flexbox layout */
+      flex-direction: column; /* Stack items vertically */
+      background-color: #ffeb3b; /* Background color */
+      position: absolute; /* Position absolutely within the header */
+      width: 100%; /* Full width */
+      height: 100vh; /* Full height */
+      left: 0; /* Align to the left */
+      top: 0; /* Align to the top */
+      opacity: 0; /* Start transparent */
+      transform: translateY(-20px); /* Slide up initially */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+      pointer-events: none;; /* No interaction when hidden */
+  }
+
+  .navigation-list {
+    flex-direction: column;
+  }
+
+  .header.open .navigation {
+      opacity: 1; /* Fully visible when open */
+      transform: translateY(0); /* Slide down to original position */
+      pointer-events: auto; /* Enable interaction when open */
+      flex-direction: column;
+  }
+
+  .navigation-item {
+      text-align: center; /* Center text in items */
+      padding: 15px 0; /* Padding for spacing */
+      opacity: 0; /* Start as invisible */
+      transform: translateY(-10px); /* Slightly translate up initially */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for items */
+  }
+
+  .header.open .navigation-item {
+      opacity: 1; /* Make items visible */
+      transform: translateY(0); /* Move items to original position */
+  }
+  }
+
+@media (max-width: 426px) { 
+  .header {
+    width: 100%; /* Full width of the screen */
+    position: fixed; /* Fix the header to the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    background-color: #ffeb3b; /* Background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .container {
+    width: 80%; /* Set container width */
+    max-width: 1920px; /* Maximum width */
+    height: 80%; /* Adjust height as needed; this can be removed if not required */
+    max-height: 80px; /* Use a specific height or adjust as needed */
+    display: flex; /* Use flexbox for content alignment */
+    padding: 20px; /* Internal padding */
+    background-color: #fdfd96; /* Background color */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    align-items: center; /* Center items inside the container */
+    margin: 10px auto; /* Add margin on the top and bottom, auto for horizontal centering */
+  }
+  
+  .container1 {
+    width: 100%;
+    background-color: #fdfd96;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    align-items: center;
+  }
+
+  .header-burger-btn {
+      display: block; /* Show burger button on mobile */
+      cursor: pointer; /* Pointer cursor for better UX */
+      padding-top: 20px;
+      margin-right: 10%;
+  }
+
+    .navigation {
+        display: flex; /* Use Flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #ffeb3b; /* Background color */
+        position: absolute; /* Position absolutely within the header */
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        left: 0; /* Align to the left */
+        top: 0; /* Align to the top */
+        opacity: 0; /* Start transparent */
+        transform: translateY(-20px); /* Slide up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+        pointer-events: none;; /* No interaction when hidden */
+    }
+    
+    .navigation-list {
+      flex-direction: column;
+    }
+
+    .header.open .navigation {
+        opacity: 1; /* Fully visible when open */
+        transform: translateY(0); /* Slide down to original position */
+        pointer-events: auto; /* Enable interaction when open */
+        flex-direction: column;
+    }
+
+    .navigation-item {
+        text-align: center; /* Center text in items */
+        padding: 15px 0; /* Padding for spacing */
+        opacity: 0; /* Start as invisible */
+        transform: translateY(-10px); /* Slightly translate up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for items */
+    }
+
+    .header.open .navigation-item {
+        opacity: 1; /* Make items visible */
+        transform: translateY(0); /* Move items to original position */
+    }
+}
+

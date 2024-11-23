@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/tasks-style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.ico"
+      type="image/x-icon"
+    />
+    <script defer src="scripts/burger.js"></script>
+    <link rel="icon" href="images/favicon-32x32.ico" type="Image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <button class="header-burger-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" class="Logo" />
+        </div>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="main.html">Main</a>
+            </li>
+            <li class="navigation-item">
+              <a href="projects.html" class="button">Projects</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-selected button">Tasks</a>
+            </li>
+            <li class="navigation-item">
+              <a href="about.html">About app</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="main-content">
+      <div class="container">
+        <div class="table-info">
+          <h1 class="main-title">Tasks</h1>
+          <a href="add.html" class="button">Add new task</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="main-table">
+          <div class="task-column">
+            <h2>Tasks</h2>
+            <div class="task-item">
+              <input type="checkbox" /> Task 1
+              <button class="button delete-btn">Delete</button>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" /> Task 4
+              <button class="button delete-btn">Delete</button>
+            </div>
+          </div>
+        
+          <div class="task-column">
+            <h2>In progress</h2>
+            <div class="task-item">
+              <input type="checkbox" /> Task 2
+              <button class="button delete-btn">Delete</button>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" /> Task 5
+              <button class="button delete-btn">Delete</button>
+            </div>
+          </div>
+        
+          <div class="task-column">
+            <h2>Done</h2>
+            <div class="task-item completed">
+              <input type="checkbox" /> Task 3
+              <button class="button delete-btn">Delete</button>
+            </div>
+            <div class="task-item completed">
+              <input type="checkbox" /> Task 6
+              <button class="button delete-btn">Delete</button>
+            </div>
+          </div>
+        </div>        
+        </div>
+      </div>
+    </section>
+    <script src="bundle.js"></script>
+  </body>
+</html>
