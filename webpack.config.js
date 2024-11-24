@@ -7,40 +7,36 @@ module.exports = {
 	output: {
 		filename: 'bundle.js', // Имя выходного файла сборки
 		path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
-		assetModuleFilename: './images/picture.svg',
+		assetModuleFilename: 'images/picture.svg',
 	},
 
 	devServer: {
 		liveReload: true,
 	},
 
-	module:
-	{
-		rules: 
-		[
+	module: {
+		rules: [
 			{
-			test: /\.css$/i,
+				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
-			},
-			{
+			  },
+			  {
 				test: /\.(png|jpe?g|gif|svg)$/,
 				type: 'asset/resource',
-			},
+			  },
 			{
-				test: /\.svg$/i,
-				use:[
-						{
-							loader: 'svg-url-loader',
-							options:
-							{
-								limit: 8192, // Определяет порог, выше которого будет использоваться отдельный файл
-							},
-						},
-					],
-			},
+				test: /\.svg$/,
+				use: [
+				  {
+					loader: 'svg-url-loader',
+					options: {
+					  limit: 8192, // Определяет порог, выше которого будет использоваться отдельный файл
+					},
+				  },
+				],
+			  },
 		],
 	},
-
 
 	plugins: [
 		new HtmlWebpackPlugin({
