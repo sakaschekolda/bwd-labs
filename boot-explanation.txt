@@ -1,0 +1,11 @@
+1. скачать Node.js, chocolatley (если npm не распознаётся, перезайти в рабочую среду)
+2. клонировать репозиторий проекта из удалённого в локальный
+3. установить необходимые для работы webpack плагины:
+    npm install webpack webpack-cli webpack-dev-server --save-dev
+    npm install style-loader css-loader --save-dev
+    npm install html-webpack-plugin --save-dev
+    npm install copy-webpack-plugin --save-dev
+4. создать билд проекта:
+    npm run build
+5. запустить билд:
+    npm start
