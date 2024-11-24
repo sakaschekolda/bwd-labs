@@ -1,0 +1,614 @@
+html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #f5f5dc;
+    padding: 0;
+    padding-top: 80px;
+    margin: 0;
+    display: flex;
+    flex-direction:center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .logo img {
+    width: 120px;
+    max-width: 60px;
+    height: auto;
+  }
+
+  .main-content1 {
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .container-add {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  /* Стили для кнопок */
+  .button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button1 {
+    background-color: #ffdb38;
+    margin-right: 1%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffdb44;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reverse {
+    background-color: #fff;
+    color: #000000;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  
+  .reverse:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Модальное окно */
+  dialog {
+    background-color: #ffec66;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  dialog h2 {
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+  }
+  
+  menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  menu .button {
+    width: 48%;
+  }
+
+  .enter {
+    padding: 12px; /* Увеличены отступы для планшетов */
+    font-size: 16px; /* Увеличен размер шрифта */
+}
+  
+  /* Элементы в стиле "Пост-ит" */
+  .main-content {
+    background-color: #ffec66;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 30px auto;
+  }
+  
+  .main-content1 h1 {
+    font-size: 2rem;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+  }
+  
+  .main-content1 .button {
+    margin-top: 20px;
+  }
+  
+  /* Стили для фонового эффекта */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f9f9f9;
+  }
+  
+  
+  /* Styles for the container */
+  .container {
+    width: 80%; /* Set container width */
+    max-width: 1920px; /* Maximum width */
+    height: 80%; /* Adjust height as needed; this can be removed if not required */
+    max-height: 80px; /* Use a specific height or adjust as needed */
+    display: flex; /* Use flexbox for content alignment */
+    padding: 20px; /* Internal padding */
+    background-color: #fdfd96; /* Background color */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    align-items: center; /* Center items inside the container */
+    margin: 10px auto; /* Add margin on the top and bottom, auto for horizontal centering */
+  }
+  
+  .container1 {
+    padding-top: 10px;
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 60px;
+    max-width: 60px;
+    height: auto;
+  }
+
+  img {
+    max-width: 820px;
+  }
+  
+  .main-image {
+    width: 60%;
+    margin-top: 10px;
+  }
+
+  .header {
+    width: 100%; /* Full width of the screen */
+    position: fixed; /* Fix the header to the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    background-color: #ffeb3b; /* Background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .header1 {
+    background-color: #ffeb3b; /* Pale yellow */
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .main-table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .table-info {
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .task-column {
+    background-color: #ffec66;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .task-column h2 {
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .task-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .task-item input {
+    margin-right: 10px;
+  }
+
+  .delete-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff2a2a;
+  }
+  
+  .completed {
+    background-color: #d1f0d1;
+    text-decoration: line-through;
+  }
+  
+  .completed .delete-btn {
+    background-color: #ff7777;
+  }
+  .header-burger-btn {
+    display: none;
+    position: absolute; /* Position it relative to the header */
+    top: 15px; /* Margin from top */
+    right: 15px; /* Margin from right */
+    cursor: pointer; /* Pointer cursor for better UX */
+    background-color: transparent; /* Ensure no background is shown */
+    border: none; /* Remove default border */
+    z-index: 1001; /* Ensure it's above the header */
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .header-burger-btn:hover {
+    opacity: 0.7; /* Slight opacity change on hover */
+  }
+  
+  .header-burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left: 5px;
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition */
+  }
+  
+  /* This controls the lines of the burger */
+  .header-burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+  }
+  
+  .header-burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+  }
+  
+  /* Styles for the open state */
+  .header.open .header-burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg); /* Rotate the first span */
+  }
+  
+  .header.open .header-burger-btn span:nth-child(2) {
+    opacity: 0; /* Hide the middle span */
+  }
+  
+  .header.open .header-burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg); /* Rotate the last span */
+  }
+  
+  /* Navigation */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Responsive styles */
+  .navigation-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  /* Navigation item styles */
+  .navigation-item a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    padding: 14px; /* Padding for clickable area */
+    transition: background 0.3s; /* Smooth background transition */
+  }
+  
+  .navigation-item a:hover {
+    background-color: #ffd966; /* Hover color */
+  }
+  
+  /* Main content styling */
+  .main-content1 {
+
+    background-color: #fffb13;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .main-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+    /* Font changes here */
+  }
+  
+  .main-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 769px) {
+    .header {
+      width: 100%; /* Full width of the screen */
+      position: fixed; /* Fix the header to the top */
+      top: 0; /* Position it at the top */
+      left: 0; /* Align to the left */
+      background-color: #ffeb3b; /* Background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .table-info {
+      display: flex;
+      margin-top: 100px;
+      width: 100%;
+      justify-content:space-between;
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .container {
+      width: 80%; /* Set container width */
+      max-width: 1920px; /* Maximum width */
+      height: 80%; /* Adjust height as needed; this can be removed if not required */
+      max-height: 80px; /* Use a specific height or adjust as needed */
+      display: flex; /* Use flexbox for content alignment */
+      padding: 20px; /* Internal padding */
+      background-color: #fdfd96; /* Background color */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+      border-radius: 8px; /* Rounded corners */
+      align-items: center; /* Center items inside the container */
+      margin: 10px auto; /* Add margin on the top and bottom, auto for horizontal centering */
+    }
+    
+    .container1 {
+      width: 95%;
+      background-color: #fdfd96;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      align-items: center;
+    }
+  
+    .header-burger-btn {
+        display: block; /* Show burger button on mobile */
+        cursor: pointer; /* Pointer cursor for better UX */
+        display: block;
+        padding-top: 20px;
+        margin-right: 10%;
+    }
+  
+    .navigation {
+        display: flex; /* Use Flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #ffeb3b; /* Background color */
+        position: absolute; /* Position absolutely within the header */
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        left: 0; /* Align to the left */
+        top: 0; /* Align to the top */
+        opacity: 0; /* Start transparent */
+        transform: translateY(-20px); /* Slide up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+        pointer-events: none;; /* No interaction when hidden */
+    }
+  
+    .navigation-list {
+      flex-direction: column;
+    }
+  
+    .header.open .navigation {
+        opacity: 1; /* Fully visible when open */
+        transform: translateY(0); /* Slide down to original position */
+        pointer-events: auto; /* Enable interaction when open */
+        flex-direction: column;
+    }
+  
+    .navigation-item {
+        text-align: center; /* Center text in items */
+        padding: 15px 0; /* Padding for spacing */
+        opacity: 0; /* Start as invisible */
+        transform: translateY(-10px); /* Slightly translate up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for items */
+    }
+  
+    .header.open .navigation-item {
+        opacity: 1; /* Make items visible */
+        transform: translateY(0); /* Move items to original position */
+    }
+    .enter {
+        padding: 12px; /* Увеличены отступы для планшетов */
+        font-size: 16px; /* Увеличен размер шрифта */
+    }
+    .main-table {
+      flex-direction: column; /* Stack items vertically */
+      width: 100%;
+      align-items: stretch; /* Ensure items take full width */
+      gap: 10px; /* Adjust gap for vertical layout, if needed */
+    }
+
+    .task-column {
+      background-color: #ffec66;
+      padding-right: 20px;
+      padding-left: 20px;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  @media (max-width: 426px) { 
+    .header {
+      width: 100%; /* Full width of the screen */
+      position: fixed; /* Fix the header to the top */
+      top: 0; /* Position it at the top */
+      left: 0; /* Align to the left */
+      background-color: #ffeb3b; /* Background color */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .table-info {
+      display: flex;
+      width: 100%;
+      justify-content:space-between;
+      align-items: center;
+      margin-top: 100px;
+    }
+    
+    .main-table {
+      flex-direction: column; /* Stack items vertically */
+      width: 100%;
+      align-items: stretch; /* Ensure items take full width */
+    }
+
+    .container {
+      width: 80%; /* Set container width */
+      max-width: 1920px; /* Maximum width */
+      height: 80%; /* Adjust height as needed; this can be removed if not required */
+      max-height: 80px; /* Use a specific height or adjust as needed */
+      display: flex; /* Use flexbox for content alignment */
+      padding: 20px; /* Internal padding */
+      background-color: #fdfd96; /* Background color */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+      border-radius: 8px; /* Rounded corners */
+      align-items: center; /* Center items inside the container */
+      margin: 10px auto; /* Add margin on the top and bottom, auto for horizontal centering */
+    }
+    
+    .container1 {
+      width: 100%;
+      background-color: #fdfd96;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      align-items: center;
+    }
+  
+    .header-burger-btn {
+        display: block; /* Show burger button on mobile */
+        cursor: pointer; /* Pointer cursor for better UX */
+        padding-top: 20px;
+        margin-right: 10%;
+    }
+  
+      .navigation {
+          display: flex; /* Use Flexbox layout */
+          flex-direction: column; /* Stack items vertically */
+          background-color: #ffeb3b; /* Background color */
+          position: absolute; /* Position absolutely within the header */
+          width: 100%; /* Full width */
+          height: 100vh; /* Full height */
+          left: 0; /* Align to the left */
+          top: 0; /* Align to the top */
+          opacity: 0; /* Start transparent */
+          transform: translateY(-20px); /* Slide up initially */
+          transition: opacity 0.3s ease, transform 0.3s ease; /* Transitions for entering and exiting */
+          pointer-events: none;; /* No interaction when hidden */
+      }
+      
+      .navigation-list {
+        flex-direction: column;
+      }
+  
+      .header.open .navigation {
+          opacity: 1; /* Fully visible when open */
+          transform: translateY(0); /* Slide down to original position */
+          pointer-events: auto; /* Enable interaction when open */
+          flex-direction: column;
+      }
+  
+      .navigation-item {
+          text-align: center; /* Center text in items */
+          padding: 15px 0; /* Padding for spacing */
+          opacity: 0; /* Start as invisible */
+          transform: translateY(-10px); /* Slightly translate up initially */
+          transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for items */
+      }
+  
+    .header.open .navigation-item {
+        opacity: 1; /* Make items visible */
+        transform: translateY(0); /* Move items to original position */
+    }
+
+    .main-title {
+      font-size: 32px; /* Увеличен размер для мобильных устройств */
+    }
+
+    .button {
+        font-size: 18px; /* Увеличен размер для мобильных устройств */
+        padding: 15px; /* Увеличены отступы для кнопки */
+    }
+
+    dialog {
+        width: 90%;
+        max-width: 400px; /* Устанавливаем максимальную ширину */
+        margin: auto; /* Центрируем модальное окно */
+    }
+
+    dialog h2 {
+        font-size: 20px; /* Увеличен размер для мобильных устройств */
+    }
+
+    .enter {
+        font-size: 16px; /* Увеличен размер шрифта */
+        padding: 12px; /* Увеличены отступы для поля ввода */
+    }
+    
+    .task-column {
+      background-color: #ffec66;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  
