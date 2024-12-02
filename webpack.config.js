@@ -41,12 +41,6 @@ module.exports = {
             chunks: ['tasks'], 
             filename: 'tasks.html', 
         }), 
-        new HtmlWebpackPlugin({ 
-            template: './src/add.html', 
-            inject: true, 
-            chunks: ['add'], 
-            filename: 'add.html', 
-        }), 
         new CopyWebpackPlugin({ 
             patterns: [ 
                 { from: './src/images/favicon-32x32.ico', to: 'favicon.ico' }, // Копируем favicon.ico 
