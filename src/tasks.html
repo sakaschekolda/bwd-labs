@@ -1,91 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
     <title>Tasks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="shortcut icon"
-      href="images/favicon-32x32.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="images/favicon-32x32.ico" type="image/x-icon" />
     <script defer src="scripts/burger.js"></script>
-    <link rel="icon" href="images/favicon-32x32.ico" type="Image/x-icon" />
-  </head>
-  <body>
+    <script defer src="scripts/dialog-API.js"></script>
+    <script defer src="scripts/tasks-API.js"></script>
+    <link rel="icon" href="images/favicon-32x32.ico" type="image/x-icon" />
+</head>
+
+<body>
     <header class="header">
-      <div class="container">
-        <button class="header-burger-btn" id="burger">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="logo">
-          <img src="images/logo.png" alt="Logo" class="Logo" />
+        <div class="container">
+            <button class="header-burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" class="Logo" />
+            </div>
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="index.html">Main</a></li>
+                    <li class="navigation-item"><a href="projects.html" class="button">Projects</a></li>
+                    <li class="navigation-item"><a class="navigation-selected button">Tasks</a></li>
+                    <li class="navigation-item"><a href="about.html">About app</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a href="index.html">Main</a>
-            </li>
-            <li class="navigation-item">
-              <a href="projects.html" class="button">Projects</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-selected button">Tasks</a>
-            </li>
-            <li class="navigation-item">
-              <a href="about.html">About app</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
-    <div class="main-content" style="position: relative;">
-      <div class="container-add" style="position: relative; top: -90px;">
-        <div class="table-info">
-          <h1 class="main-title">Task table</h1>
-          <a href="add.html" class="button1">Add new task</a>
+    <div class="main-content">
+        <div class="container-add">
+            <div class="table-info">
+                <h1 class="main-title">Task Table</h1>
+                <button class="button1" id="open-dialog-btn">Add new task</button>
+            </div>
         </div>
-      </div>
-      <div class="main-table" style="position: relative; bottom: 40px;">
-        <div class="task-column">
-          <h2>Tasks</h2>
-          <div class="task-item">
-            <input type="checkbox" /> Task 1
-            <button class="button delete-btn">Delete</button>
-          </div>
-          <div class="task-item">
-            <input type="checkbox" /> Task 4
-            <button class="button delete-btn">Delete</button>
-          </div>
+
+        <!-- Main task table -->
+        <div class="main-table">
+            <div class="task-column">
+                <h2>Tasks</h2>
+                <button class="sort__button" data-status="upcoming" data-condition="asc">Sort A-Z</button>
+                <button class="sort__button" data-status="upcoming" data-condition="desc">Sort Z-A</button>
+                <div id="task-list"></div> <!-- Empty div for dynamic tasks -->
+            </div>
+            <div class="task-column">
+                <h2>In Progress</h2>
+                <button class="sort__button" data-status="inProgress" data-condition="asc">Sort A-Z</button>
+                <button class="sort__button" data-status="inProgress" data-condition="desc">Sort Z-A</button>
+                <div id="in-progress-list"></div>
+            </div>
+            <div class="task-column">
+                <h2>Done</h2>
+                <button class="sort__button" data-status="completed" data-condition="asc">Sort A-Z</button>
+                <button class="sort__button" data-status="completed" data-condition="desc">Sort Z-A</button>
+                <div id="done-list"></div>
+            </div>
         </div>
-      
-        <div class="task-column">
-          <h2>In progress</h2>
-          <div class="task-item">
-            <input type="checkbox" /> Task 2
-            <button class="button delete-btn">Delete</button>
-          </div>
-          <div class="task-item">
-            <input type="checkbox" /> Task 5
-            <button class="button delete-btn">Delete</button>
-          </div>
-        </div>
-      
-        <div class="task-column">
-          <h2>Done</h2>
-          <div class="task-item completed">
-            <input type="checkbox" /> Task 3
-            <button class="button delete-btn">Delete</button>
-          </div>
-          <div class="task-item completed">
-            <input type="checkbox" /> Task 6
-            <button class="button delete-btn">Delete</button>
-          </div>
-        </div>
-      </div>
+
+        <dialog id="task-dialog">
+            <div class="modal-content">
+                <span class="close" id="close-dialog-btn">&times;</span>
+                <h2>Add New Task</h2>
+                <form id="taskForm">
+                    <input type="text" id="task-input" placeholder="Enter task name" required />
+                    <label>
+                        <input type="checkbox" id="taskStatus" /> Mark as completed
+                    </label>
+                    <button type="submit" id="add-task-btn">Add Task</button>
+                </form>
+            </div>
+        </dialog>
     </div>
+
     <script src="bundle.js"></script>
-  </body>
+</body>
+
 </html>
