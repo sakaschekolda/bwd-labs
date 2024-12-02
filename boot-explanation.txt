@@ -7,5 +7,6 @@
     npm install copy-webpack-plugin --save-dev
 4. создать билд проекта:
     npm run build
-5. запустить билд:
+5. скопировать папки images, scripts и файл styles.css в папку билда dist
+6. запустить билд:
     npm start
